@@ -1,0 +1,228 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(to right, #ff6b6b, #ffa502);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Links Styles */
+.links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.link-button {
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+.link-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to bottom, #00f2fe, #4facfe);
+}
+
+/* Content Box Styles */
+.content-box {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-box h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.counter {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Tomagotchi Container */
+.tomagotchi-container {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Status Bar */
+.status-bar {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Status Bar Items */
+.status-item {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.status-value {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Status Bar Icons */
+.status-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Stats Display */
+.stats-display {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.stat-box {
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stat-title {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.action-button {
+    background: linear-gradient(to bottom, #ff6b6b, #ffa502);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 20px;
+    padding: 15px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 10px;
+    font-size: 0.9em;
+}
+
+/* Animation for status icons */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .link-button {
+        width: 80%;
+    }
+    
+    .content-box h2 {
+        font-size: 1.5em;
+    }
+}

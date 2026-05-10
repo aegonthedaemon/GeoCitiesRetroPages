@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cute Girly Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Welcome to My Cute Girly Page! ✨</h1>
+        <p class="subtitle">Made with lots of love and sparkles 💖</p>
+        
+        <div class="marquee">
+            🌸 WELCOME TO MY AWESOME GIRLY WEBSITE! 🌸
+        </div>
+        
+        <div class="content-box">
+            <h2>🌸 About Me 🌸</h2>
+            <p>Hi there! I'm so excited to share my girly world with you!</p>
+            <p>Here you'll find all my favorite things: cute pictures, sparkles, and lots of fun!</p>
+        </div>
+        
+        <div class="content-box">
+            <h2>💕 My Favorite Things 💕</h2>
+            <div class="balloon">💖</div>
+            <div class="balloon">🎀</div>
+            <div class="balloon">🌸</div>
+            <div class="balloon">🌟</div>
+            <div class="balloon">💫</div>
+        </div>
+        
+        <div class="content-box">
+            <h2>✨ My Links ✨</h2>
+            <div class="links">
+                <a href="#" class="link-button">My Photos</a>
+                <a href="#" class="link-button">My Music</a>
+                <a href="#" class="link-button">My Favorites</a>
+                <a href="#" class="link-button">My Diary</a>
+                <a href="#" class="link-button">My Games</a>
+            </div>
+        </div>
+        
+        <div class="content-box">
+            <h2>⭐ Visitor Counter ⭐</h2>
+            <p class="counter"> Visitors: <span id="visitor-count">0</span></p>
+        </div>
+        
+        <div class="tomagotchi-container">
+            <!-- Tomagotchi Display -->
+            <div class="tomagotchi-display">
+                <div class="status-bar">
+                    <div class="status-item">
+                        <span class="label">Hunger:</span>
+                        <div class="progress-bar hunger-bar">
+                            <div class="progress" id="hunger-progress"></div>
+                        </div>
+                        <span class="value" id="hunger-value">100</span>
+                    </div>
+                    
+                    <div class="status-item">
+                        <span class="label">Happiness:</span>
+                        <div class="progress-bar happiness-bar">
+                            <div class="progress" id="happiness-progress"></div>
+                        </div>
+                        <span class="value" id="happiness-value">100</span>
+                    </div>
+                    
+                    <div class="status-item">
+                        <span class="label">Health:</span>
+                        <div class="progress-bar health-bar">
+                            <div class="progress" id="health-progress"></div>
+                        </div>
+                        <span class="value" id="health-value">100</span>
+                    </div>
+                </div>
+                
+                <div class="tomagotchi-face" id="tomagotchi-face">
+                    <!-- Tomagotchi will be drawn here -->
+                </div>
+                
+                <div class="message-area" id="message-area">
+                    Welcome to your Tomagotchi! 🌟
+                </div>
+            </div>
+            
+            <!-- Controls -->
+            <div class="controls">
+                <button class="control-btn" onclick="feed()">🍽️ Feed</button>
+                <button class="control-btn" onclick="play()">🎮 Play</button>
+                <button class="control-btn" onclick="clean()">🛁 Clean</button>
+                <button class="control-btn" onclick="sleep()">😴 Sleep</button>
+                <button class="control-btn" onclick="resetGame()">🔄 Reset</button>
+            </div>
+        </div>
+        <script src="tomagotchi.js"></script>
+        
+        <div class="footer">
+            <p>✨ Made with 💖 for the retro web ✨</p>
+            <p>Made with ❤️ and 💫 | © 2023 My Cute Girly Page</p>
+            <p>© 2023 Tomagotchi World - All Rights Reserved</p>
+            <p><span class="sparkle">✨</span> Best viewed in Netscape Navigator! <span class="sparkle">✨</span></p>
+            <p>© 2023 Tomagotchi World - All Rights Reserved</p>
+        </div>
+    </div>
+    
+    <script>
+        // Simple visitor counter
+        let count = localStorage.getItem('visitorCount') || 0;
+        count++;
+        localStorage.setItem('visitorCount', count);
+        document.getElementById('visitor-count').textContent = count;
+        
+        // Add sparkle effect to all sparkles
+        const sparkles = document.querySelectorAll('.sparkle');
+        sparkles.forEach(sparkle => {
+            sparkle.addEventListener('mouseover', function() {
+                this.style.animation = 'none';
+                setTimeout(() => {
+                    this.style.animation = 'sparkle 1s infinite';
+                }, 10);
+            });
+        });
+    </script>
+</body>
+</html>
